@@ -30,7 +30,7 @@ int main(void) {
     fclose(fp);
 
     char *free[] = {"GPL", "WTFPL", "CC0", "CC-PDDC"};
-    char *permissive[] = {"MIT", "Apache" , "OFL", "BSD", "MPL", "SIL", "HPND", "ISC", "X11", "APACHE", "PerlArtistic", "PSF", "Zlib"};
+    char *permissive[] = {"MIT", "Apache" , "OFL", "BSD", "MPL", "SIL", "HPND", "ISC", "X11", "APACHE", "PerlArtistic", "PSF", "Zlib", "PostgreSQL"};
     char *restrictive[] = {"sleepycat", "BSL"};
     char *proprietary[] = {"chrome"};
     char *custom[] = {"custom", "LicenseRef"};
@@ -59,7 +59,7 @@ int main(void) {
         }
 
         // Check for "permissive" license
-        for (int j = 0; j < 13; j++) {
+        for (int j = 0; j < 14; j++) {
             if (strstr(packages[i], permissive[j])) {
                 is_permissive = 1;
                 break;
