@@ -112,14 +112,14 @@ int main(void) {
 
     }
 
-    printf("\n  IsMyArchFree results (%d packages analyzed):\n", freeCount+permissiveCount+restrictiveCount+customCount+proprietaryCount+unidentifiedCount);
-    printf("  \033[0;32m%d packages contain free license\033[0m\n", freeCount);
-    printf("  \033[0;32m%d packages contain permissive license\033[0m\n", permissiveCount);
-    printf("  \033[1;33m%d packages contain restrictive license\033[0m\n", restrictiveCount);
-    printf("  \033[1;33m%d packages contain custom license\033[0m\n", customCount);
-    printf("  \033[0;31m%d packages contain proprietary license\033[0m\n", proprietaryCount);
-    printf("  \033[0;31m%d packages contain unidentified license\033[0m\n", unidentifiedCount);
-    printf("  If you encountered packages with unidentified or misidentified licenses, please submit an issue with the program's output.\n");
+    printf("\nIsMyArchFree results (%d packages analyzed):\n", freeCount+permissiveCount+restrictiveCount+customCount+proprietaryCount+unidentifiedCount);
+    printf("\033[0;32m%d packages contain free license\033[0m\n", freeCount);
+    printf("\033[0;32m%d packages contain permissive license\033[0m\n", permissiveCount);
+    printf("\033[1;33m%d packages contain restrictive license\033[0m\n", restrictiveCount);
+    printf("\033[1;33m%d packages contain custom license\033[0m\n", customCount);
+    printf("\033[0;31m%d packages contain proprietary license\033[0m\n", proprietaryCount);
+    printf("\033[0;31m%d packages contain unidentified license\033[0m\n", unidentifiedCount);
+    printf("If you encountered packages with unidentified or misidentified licenses, please submit an issue with the program's output.\n");
 
     return 0;
 }
