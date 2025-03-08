@@ -28,11 +28,30 @@ int main(void) {
 
     fclose(fp);
 
-    char *free[] = {"GPL", "WTFPL", "CC0", "CC-PDDC"};
-    char *permissive[] = {"MIT", "Apache" , "OFL", "BSD", "MPL", "SIL", "HPND", "ISC", "X11", "APACHE", "PerlArtistic", "PSF", "Zlib", "PostgreSQL"};
-    char *restrictive[] = {"sleepycat", "BSL"};
-    char *proprietary[] = {"chrome"};
-    char *custom[] = {"custom", "LicenseRef"};
+    char *free[] = {
+        "GPL", "WTFPL", "CC0", "CC-PDDC"
+    };
+
+    char *permissive[] = {
+        "MIT", "Apache", "OFL", "BSD", "MPL",
+        "SIL", "HPND", "ISC", "X11", "APACHE",
+        "PerlArtistic", "PSF", "Zlib", "PostgreSQL",
+        "wxWindows", "zlib"
+    };
+
+    char *restrictive[] = {
+        "sleepycat", "BSL"
+    };
+
+    char *proprietary[] = {
+        "chrome"
+    };
+
+    char *custom[] = {
+        "custom", "LicenseRef"
+    };
+
+
 
     int freeCount = 0;
     int permissiveCount = 0;
@@ -50,7 +69,7 @@ int main(void) {
         int is_custom = 0;
 
         // Check for "free" license
-        for (int j = 0; j < 4; j++) {
+        for (int j = 0; j < sizeof(free) / sizeof(free[0]); j++) {
             if (strstr(packages[i], free[j])) {
                 is_free = 1;
                 break;
@@ -58,7 +77,7 @@ int main(void) {
         }
 
         // Check for "permissive" license
-        for (int j = 0; j < 14; j++) {
+        for (int j = 0; j < sizeof(permissive) / sizeof(permissive[0]); j++) {
             if (strstr(packages[i], permissive[j])) {
                 is_permissive = 1;
                 break;
@@ -66,14 +85,14 @@ int main(void) {
         }
 
         // Check for "restrictive" license
-        for (int j = 0; j < 2; j++) {
+        for (int j = 0; j < sizeof(restrictive) / sizeof(restrictive[0]); j++) {
             if (strstr(packages[i], restrictive[j])) {
                 is_restrictive = 1;
                 break;
             }
         }
 
-        for (int j = 0; j < 1; j++) {
+        for (int j = 0; j < sizeof(proprietary) / sizeof(proprietary[0]); j++) {
             if (strstr(packages[i], proprietary[j])) {
                 is_proprietary = 1;
                 break;
@@ -81,7 +100,7 @@ int main(void) {
         }
 
         // Check for "custom" license
-        for (int j = 0; j < 2; j++) {
+        for (int j = 0; j < sizeof(custom) / sizeof(custom[0]); j++) {
             if (strstr(packages[i], custom[j])) {
                 is_custom = 1;
                 break;
