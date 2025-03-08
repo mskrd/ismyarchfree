@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-#define MAX_LINES 1000
+#define MAX_LINES 10000
 #define MAX_LENGTH 512
 
 int main(void) {
