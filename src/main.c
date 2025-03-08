@@ -51,8 +51,6 @@ int main(void) {
         "custom", "LicenseRef"
     };
 
-
-
     int freeCount = 0;
     int permissiveCount = 0;
     int restrictiveCount = 0;
@@ -92,6 +90,7 @@ int main(void) {
             }
         }
 
+        // Check for "proprietary" license
         for (int j = 0; j < sizeof(proprietary) / sizeof(proprietary[0]); j++) {
             if (strstr(packages[i], proprietary[j])) {
                 is_proprietary = 1;
@@ -107,7 +106,6 @@ int main(void) {
             }
         }
 
-        // Output color-coded status
         if (is_free) {
             printf("\033[0;32m [FREE]\n\033[0m");
             freeCount++;
