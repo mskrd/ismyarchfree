@@ -29,18 +29,24 @@ int main(void) {
     fclose(fp);
 
     char *free[] = {
-        "GPL", "WTFPL", "CC0", "CC-PDDC"
+        "GPL", "CC-BY-SA", "FDL", "GFDL"
     };
 
     char *permissive[] = {
         "MIT", "Apache", "OFL", "BSD", "MPL",
         "SIL", "HPND", "ISC", "X11", "APACHE",
         "PerlArtistic", "PSF", "Zlib", "PostgreSQL",
-        "wxWindows", "zlib"
+        "wxWindows", "zlib", "WTFPL", "CC0", "CC-PDDC",
+        "AFL", "vim", "HPND", "CPL", "CDDL", "AMD",
+        "Arphic_Public_License", "MPL", "OpenLDAP",
+        "RtAudio", "sleepycat", "ttf-hack", "ZLIB",
+        "EPL", "FSFULLR", "FTL", "TCL", "SGI-B",
+        "SISSL", "SMLNJ", "none", "Public Domain",
+        "Unlicense", "None", "Python"
     };
 
     char *restrictive[] = {
-        "sleepycat", "BSL"
+        "BSL"
     };
 
     char *proprietary[] = {
